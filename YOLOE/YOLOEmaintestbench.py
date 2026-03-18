@@ -174,10 +174,7 @@ def draw_and_show(image_path: str, best: dict, prompt: str):
                 cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 0), 2)
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     image_stem = Path(image_path).stem
-    safe_prompt = "".join(
-        ch if ch.isalnum() or ch in ("-", "_") else "_" for ch in prompt
-    ).strip("_") or "query"
-    out = OUTPUT_DIR / f"{image_stem}_result-{safe_prompt}.jpg"
+    out = OUTPUT_DIR / f"{image_stem}_result-{prompt}.jpg"
     cv2.imwrite(str(out), frame)
     print(f"Saved: {out}")
     try:
@@ -188,7 +185,7 @@ def draw_and_show(image_path: str, best: dict, prompt: str):
 
 # ── Run ───────────────────────────────────────────────────────────────────────
 if __name__ == "__main__":
-    IMAGE_PATH = IMAGE_DIR / "000000001268.jpg"
+    IMAGE_PATH = IMAGE_DIR / "000000004177.jpg"
     if not IMAGE_PATH.exists():
         raise FileNotFoundError(
             f"Image file not found: {IMAGE_PATH}\n"
@@ -196,9 +193,8 @@ if __name__ == "__main__":
         )
 
     tests = [
-        (str(IMAGE_PATH), "Something to eat"),
-        (str(IMAGE_PATH), "Place where you can sit"),
-        (str(IMAGE_PATH), "Appliance to heat up food"),
+        (str(IMAGE_PATH), "Something to drink tea from"),
+        (str(IMAGE_PATH), "Appliance to heat up food")
     ]
 
     for image_path, prompt in tests:
