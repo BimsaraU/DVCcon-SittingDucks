@@ -1,0 +1,6 @@
+ultralytics>=8.3.0
+sentence-transformers>=3.0.0
+torch>=2.2.0
+psutil>=5.9.0
+opencv-python>=4.10.0
+Pillow>=10.0.0

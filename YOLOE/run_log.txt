@@ -1,0 +1,87 @@
+faster downloads.
+Loading weights: 100%|█████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 8753.89it/s]
+BertModel LOAD REPORT from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  |
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  |
+
+Notes:
+- UNEXPECTED    :can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Pre-computing COCO embeddings...
+Ready.
+
+Prompt:   'Something to eat'
+Image:    'D:\DVCon\YOLO-World\chair.jpeg'
+Strategy: batches of 10 · max 8 re-params
+
+  Batch    Reparam    Infer      RAM   CPU%  Dets  Status
+  ────────────────────────────────────────────────────────────
+      1    1060.9ms   112.1ms   729.2MB  655.3     0  no match
+      2     412.3ms    88.1ms   751.1MB  868.2     0  no match
+      3     399.7ms    89.2ms   769.3MB  748.6     3  FOUND — stopping
+
+  Early exit at batch 3/8 — skipped 5 batches (50 classes unscanned)
+  Wall time: 2614.6ms  (3 re-params instead of 8)
+
+==================================================
+Best: CHAIR
+  Score: 0.0366  Conf: 0.842  Rank: #23/80
+  BBox: [ 685  420 1326 1203]
+==================================================
+
+  All detections in winning batch:
+    chair                 score:0.0366  conf:0.842 <-- best
+    chair                 score:0.0285  conf:0.656
+    chair                 score:0.0163  conf:0.374
+
+Saved: D:\DVCon\YOLO-World\chair_result.jpg
+
+Prompt:   'Place where you can sit'
+Image:    'D:\DVCon\YOLO-World\chair.jpeg'
+Strategy: batches of 10 · max 8 re-params
+
+  Batch    Reparam    Infer      RAM   CPU%  Dets  Status
+  ────────────────────────────────────────────────────────────
+      1     506.6ms   120.2ms   779.1MB  870.9     3  FOUND — stopping
+
+  Early exit at batch 1/8 — skipped 7 batches (70 classes unscanned)
+  Wall time: 911.4ms  (1 re-params instead of 8)
+
+==================================================
+Best: CHAIR
+  Score: 0.4209  Conf: 0.842  Rank: #2/80
+  BBox: [ 685  420 1326 1203]
+==================================================
+
+  All detections in winning batch:
+    chair                 score:0.4209  conf:0.842 <-- best
+    chair                 score:0.3281  conf:0.656
+    chair                 score:0.1870  conf:0.374
+
+Saved: D:\DVCon\YOLO-World\chair_result.jpg
+
+Prompt:   'Appliance to heat up food'
+Image:    'D:\DVCon\YOLO-World\chair.jpeg'
+Strategy: batches of 10 · max 8 re-params
+
+  Batch    Reparam    Infer      RAM   CPU%  Dets  Status
+  ────────────────────────────────────────────────────────────
+      1     664.0ms   108.1ms   781.5MB  650.9     0  no match
+      2     498.8ms    99.9ms   786.0MB  872.0     2  FOUND — stopping
+
+  Early exit at batch 2/8 — skipped 6 batches (60 classes unscanned)
+  Wall time: 1783.8ms  (2 re-params instead of 8)
+
+==================================================
+Best: LAPTOP
+  Score: 0.0723  Conf: 0.940  Rank: #13/80
+  BBox: [ 798   96 1224  405]
+==================================================
+
+  All detections in winning batch:
+    laptop                score:0.0723  conf:0.940 <-- best
+    laptop                score:0.0389  conf:0.506
+
+Saved: D:\DVCon\YOLO-World\chair_result.jpg
+
+Press 0 to exit..

@@ -1,0 +1,79 @@
+Loading models...
+Warning: You are sending unauthenticated requests to the HF Hub. Please set a HF_TOKEN to enable higher rate limits and faster downloads.
+Loading weights: 100%|█████████████████████████████████████████████████████████████| 103/103 [00:00<00:00, 5460.23it/s]
+BertModel LOAD REPORT from: sentence-transformers/all-MiniLM-L6-v2
+Key                     | Status     |  |
+------------------------+------------+--+-
+embeddings.position_ids | UNEXPECTED |  |
+
+Notes:
+- UNEXPECTED    :can be ignored when loading from different task/architecture; not ok if you expect identical arch.
+Pre-computing COCO embeddings...
+Ready.
+
+Prompt:   'Something to eat'
+Image:    'D:\DVCon\YOLO-World\000000001268.jpg'
+Strategy: batches of 10 · max 8 re-params
+
+  Batch    Reparam    Infer      RAM   CPU%  Dets  Status
+  ────────────────────────────────────────────────────────────
+      1    1473.6ms   158.0ms   706.2MB  654.3     0  no match
+      2     512.2ms    86.7ms   726.0MB  867.0     1  FOUND — stopping
+
+  Early exit at batch 2/8 — skipped 6 batches (60 classes unscanned)
+  Wall time: 2608.0ms  (2 re-params instead of 8)
+
+==================================================
+Best: BIRD
+  Score: 0.0188  Conf: 0.263  Rank: #14/80
+  BBox: [245 226 266 252]
+==================================================
+
+Saved: D:\DVCon\YOLO-World\000000001268_result-Something to eat.jpg
+
+Prompt:   'Place where you can sit'
+Image:    'D:\DVCon\YOLO-World\000000001268.jpg'
+Strategy: batches of 10 · max 8 re-params
+
+  Batch    Reparam    Infer      RAM   CPU%  Dets  Status
+  ────────────────────────────────────────────────────────────
+      1     560.3ms   100.5ms   747.6MB  651.1     0  no match
+      2     533.3ms    91.4ms   744.8MB  869.8     2  FOUND — stopping
+
+  Early exit at batch 2/8 — skipped 6 batches (60 classes unscanned)
+  Wall time: 1685.5ms  (2 re-params instead of 8)
+
+==================================================
+Best: HANDBAG
+  Score: 0.0423  Conf: 0.592  Rank: #14/80
+  BBox: [495 267 593 395]
+==================================================
+
+  All detections in winning batch:
+    handbag               score:0.0423  conf:0.592 <-- best
+    umbrella              score:0.0237  conf:0.261
+
+Saved: D:\DVCon\YOLO-World\000000001268_result-Place where you can sit.jpg
+
+Prompt:   'Appliance to heat up food'
+Image:    'D:\DVCon\YOLO-World\000000001268.jpg'
+Strategy: batches of 10 · max 8 re-params
+
+  Batch    Reparam    Infer      RAM   CPU%  Dets  Status
+  ────────────────────────────────────────────────────────────
+      1     600.8ms   101.9ms   757.4MB  621.1     0  no match
+      2     544.2ms   147.4ms   753.3MB  684.1     0  no match
+      3     522.6ms    89.1ms   756.0MB  620.1     1  FOUND — stopping
+
+  Early exit at batch 3/8 — skipped 5 batches (50 classes unscanned)
+  Wall time: 2498.8ms  (3 re-params instead of 8)
+
+==================================================
+Best: BIRD
+  Score: 0.0097  Conf: 0.263  Rank: #27/80
+  BBox: [245 226 266 252]
+==================================================
+
+Saved: D:\DVCon\YOLO-World\000000001268_result-Appliance to heat up food.jpg
+
+Press 0 to exit..
